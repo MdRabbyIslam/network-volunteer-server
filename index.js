@@ -109,4 +109,8 @@ client.connect((err) => {
   //end delete
 }); //end mongo db
 
+app.get("/", (req, res) => {
+  res.send("this is rabby's server");
+});
+
 app.listen(process.env.PORT || port);
