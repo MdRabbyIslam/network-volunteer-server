@@ -85,7 +85,7 @@ client.connect((err) => {
   //adding new event
   app.post("/addevents", (req, res) => {
     collection.insertOne(req.body).then((result) => {
-      res.redirect("http://localhost:3000");
+      res.send("success");
     });
   });
   //adding new volunteer
