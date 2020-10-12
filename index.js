@@ -18,7 +18,7 @@ require("dotenv").config();
 
 //firebase admin
 const admin = require("firebase-admin");
-const serviceAccount = require(process.env.GOOGLE_APPLICATION_CREDENTIALS);
+const serviceAccount = require("./volunteer-network-12fba-firebase-adminsdk-c4d2q-fe7ce4923b.json");
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
   databaseURL: `https://${process.env.FIREBASE_DB_NAME}.firebaseio.com`,
