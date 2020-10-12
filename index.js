@@ -86,6 +86,7 @@ client.connect((err) => {
   app.post("/addevents", (req, res) => {
     collection.insertOne(req.body).then((result) => {
       res.send(result.insertedCount > 0);
+      console.log(result.insertedCount);
     });
   });
   //adding new volunteer
